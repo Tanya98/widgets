@@ -1,0 +1,13 @@
+<div class="block-weather">
+  <ng-container *ngIf="weathers; else preolder">
+    <p>{{weathers.title}}</p>
+    <div class="line"></div>
+    <img [src]='weathers.icon'><span>{{weathers.temperature}}°</span>
+    <p>Water {{weathers.water}}°</p>
+  </ng-container>
+  <ng-template #preolder>
+    <div class="preolder">
+      <div id="page-loader" class="loader"></div>
+    </div>
+  </ng-template>
+</div>
